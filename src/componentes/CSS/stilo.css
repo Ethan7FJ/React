@@ -1,0 +1,22 @@
+.contenido{
+    margin: 30%;
+}
+
+.back{
+    background: rgb(149, 194, 194);
+    border-radius: 50px;
+}
+
+.font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logo{
+    height: 200px;
+    width: 200px;
+    margin:50px;
+    margin-left: 37%;
+    border-radius: 50%;
+}
