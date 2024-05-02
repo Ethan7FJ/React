@@ -1,19 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Card from "./componentes/Card";
+import Maestro from "./componentes/pages/maestro";
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
 )
 
-root.render(<Card
-
-  nombre= "Johitan"
-  edad = "19"
-  color = "63545F"
-
-/>)
+root.render(
+  <Maestro/>
+)
 
 
 

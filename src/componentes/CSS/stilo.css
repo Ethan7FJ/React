@@ -1,9 +1,15 @@
+body{
+    background-color: black;
+}
+
 .contenido{
-    margin: 30%;
+    width: 300px;
+    height: auto;
+    box-shadow: 1px 1px 7px rgb(255, 255, 255);
 }
 
 .back{
-    background: rgb(149, 194, 194);
+    background-color: black;
     border-radius: 50px;
 }
 
@@ -11,12 +17,18 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     text-align: center;
+    color: white;
 }
 
 .logo{
     height: 200px;
     width: 200px;
     margin:50px;
-    margin-left: 37%;
+    margin-left: 16%;
     border-radius: 50%;
+    box-shadow: 2px 2px 7px rgb(255, 255, 255);
+}
+
+.jas{
+    color: white;
 }
