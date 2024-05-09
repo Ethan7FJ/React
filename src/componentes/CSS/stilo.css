@@ -1,11 +1,11 @@
 body{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .contenido{
     width: 300px;
     height: auto;
-    box-shadow: 1px 1px 7px rgb(255, 255, 255);
+    box-shadow: 1px 1px 7px rgb(0, 0, 0);
 }
 
 .back{
@@ -17,7 +17,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .logo{
@@ -30,5 +30,5 @@ body{
 }
 
 .jas{
-    color: white;
+    color: rgb(0, 0, 0);
 }

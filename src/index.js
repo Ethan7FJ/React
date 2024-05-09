@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Maestro from "./componentes/pages/maestro";
+/* import Maestro from "./componentes/pages/maestro"; */
+import App from "./componentes/app";
 
 
 const root = ReactDOM.createRoot(
@@ -8,7 +9,7 @@ const root = ReactDOM.createRoot(
 )
 
 root.render(
-  <Maestro/>
+  <App/>
 )
 
 
