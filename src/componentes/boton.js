@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Boton(props){
-    return(
-        <div>
-            <Link to="/Pagina/new">gola</Link>
-        </div>
-    )
-}
+const Boton = ()=>(
+    <Link to="/formu">gola</Link>
+)
+
+export default Boton

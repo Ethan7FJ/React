@@ -4,14 +4,14 @@ import Maestro from "./pages/maestro";
 import Wuenas from "./pages/wuenas";
 import Nofound from "./pages/Nofound";
 
-export default function App(){
-    return(
-        <BrowserRouter>
+const App = ()=>(
+    <BrowserRouter>
             <Routes>
                 <Route exact path="/*" element={<Nofound/>}></Route>
-                <Route exact path="/Pagina/new" element={<Wuenas/>}></Route>
+                <Route exact path="/formu" element={<Wuenas/>}></Route>
                 <Route exact path="/cartas" element={<Maestro/>}></Route>
             </Routes>
         </BrowserRouter>
-    )
-}
+)
+
+export default App

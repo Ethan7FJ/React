@@ -19,7 +19,7 @@ class Card extends React.Component{
         },3000)
     } */
     render(){
-
+ 
         const {nombre,descip,img,color} = this.props;
 
         return(<div className="todo">
