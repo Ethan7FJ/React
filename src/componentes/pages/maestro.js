@@ -24,7 +24,6 @@ export default class Maestro extends React.Component{
                 "nombre":"Juli",
                 "descip":"Es un programador semi junior medio experimentado estudiante del sena",
                 "img": gatito,
-                "color": "#828180"
             },
             {
                 id:3,

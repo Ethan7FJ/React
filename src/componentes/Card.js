@@ -20,11 +20,11 @@ class Card extends React.Component{
     } */
     render(){
  
-        const {nombre,descip,img,color} = this.props;
+        const {nombre,descip,img} = this.props;
 
         return(<div className="todo">
             
-            <div className="contenido" style={{background:`${color}`}}>
+            <div className="contenido">
                 <div className="font">
                     <h1>Hola {nombre}</h1>
                     <p>{descip}</p>
