@@ -7,11 +7,10 @@ const Iterador = ({chao})=>(
             chao.map((chao)=>{
                 return(
                     <Card
-                        key={chao.id}
-                        nombre = {chao.nombre}
-                        descip = {chao.descip}
+                        key={chao.id_b}
+                        title = {chao.title}
+                        descripcion = {chao.descripcion}
                         img = {chao.img}
-                        color = {chao.color}
                     />
                 )
             })

@@ -1,23 +1,19 @@
 import React from "react";
 
 export default class Formulario extends React.Component{
-    
-    handleSubmit=e=>{
-        e.preventDefault()
-        console.log(this.formu)
-    }
+
     render(){
-        const {onChange,formu} = this.props
+        const {onChange,formu,onSubmit} = this.props
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={onSubmit}>
                     <div>
                         <label>Nombre:</label>
-                        <input type="text" name="nombre" placeholder="Nombre aqui!!" onChange={onChange} value={formu.nombre}/>
+                        <input type="text" name="title" placeholder="Nombre aqui!!" onChange={onChange} value={formu.title}/>
                     </div>
                     <div>
                         <label>Descripcion:</label>
-                        <input type="text" name="descip" placeholder="Descipcion aqui!!" onChange={onChange} value={formu.descip}/>
+                        <input type="text" name="descripcion" placeholder="Descipcion aqui!!" onChange={onChange} value={formu.descripcion}/>
                     </div>
                     <div>
                         <label>Url de la imagen:</label>

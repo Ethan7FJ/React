@@ -1,50 +1,28 @@
 import React from "react";
 /* import Card from "../Card"; */
 import Hola from "../saludo"
-import huron from "../IMG/huron.jpg";
-import gatito from "../IMG/gatito.png";
-import koku from "../IMG/koku.jpg";
-import rappi from "../IMG/rappi.jpg";
-import visco from "../IMG/visco.jpg";
 import Iterador from "../iterante"
 import Boton from "../boton";
 
 
 export default class Maestro extends React.Component{
         state = {
-            data:[{
-                id:1,
-                "nombre": "Johitan",
-                "descip": "Eres un programador junior medio experimentado estudiante del SENA",
-                "img": huron
-                
-            },
-            {
-                id:2,
-                "nombre":"Juli",
-                "descip":"Es un programador semi junior medio experimentado estudiante del sena",
-                "img": gatito,
-            },
-            {
-                id:3,
-                "nombre":"Carlitos",
-                "descip":"Es un programador x casi experimentado estudiante del Sena",
-                "img": koku
-            },
-            {
-                id:4,
-                "nombre":"Juanito",
-                "descip":"Es un programador y casi experimentado estudiante del Sena",
-                "img": visco
-            },
-            {
-                id:5,
-                "nombre":"Miguelito",
-                "descip":"Es un programador z casi experimentado estudiante del Sena",
-                "img": rappi
-            }]
+            data:[
+
+            ]
         }
-    
+        async componentDidMount(){
+            await this.cargarComponentes()
+        }
+
+        cargarComponentes = async()=>{
+            let res = await fetch('http://localhost:8000/api/info')
+            let data = await res.json()
+            this.setState({
+                data
+            })
+        }
+
     render(){
         return(
             <div>
