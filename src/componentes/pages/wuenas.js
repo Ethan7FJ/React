@@ -34,7 +34,9 @@ export default class Wuenas extends React.Component{
             let res = await fetch('http://localhost:8000/api/info',config)
             let json = await res.json()
             console.log(json)
+            this.props.navigate('/Lista')
         }
+
         catch(error){
 
         }
@@ -42,7 +44,7 @@ export default class Wuenas extends React.Component{
     }
     
    render(){
-    return(<div>
+    return(<React.Fragment>
         <Card
             {...this.state.formu}
         />
@@ -51,7 +53,7 @@ export default class Wuenas extends React.Component{
             onChange = {this.handleChange}
             formu={this.state.formu}
         />
-    </div>)
+    </React.Fragment>)
    }
 
 }

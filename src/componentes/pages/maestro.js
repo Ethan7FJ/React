@@ -25,7 +25,7 @@ export default class Maestro extends React.Component{
 
     render(){
         return(
-            <div>
+            <React.Fragment>
                  <Hola
                     username = "Johitan"
                 />
@@ -33,7 +33,7 @@ export default class Maestro extends React.Component{
                     chao={this.state.data}
                 />
                 <Boton/>
-            </div>
+            </React.Fragment>
         )
     }
 }
