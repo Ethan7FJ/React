@@ -1,9 +1,8 @@
 import React from "react";
 import "../CSS/stilo.css";
-import Formulario from "../formulario";
-import Card from "../Card";
+import Dibujar from "../dibujar";
 
-export default class Wuenas extends React.Component{
+export default class Contenedor extends React.Component{
     state={
         formu:{
             title:'',
@@ -11,7 +10,7 @@ export default class Wuenas extends React.Component{
             img:''
         }
     }
-
+    
     handleChange=e=>{
         this.setState({
             formu:{
@@ -20,8 +19,10 @@ export default class Wuenas extends React.Component{
             }
         })
     }
+    
     handleSubmit= async e=>{
         e.preventDefault()
+        this.props.navigate('/cartas')
         try{
             let config ={
                 method:'POST',
@@ -34,26 +35,21 @@ export default class Wuenas extends React.Component{
             let res = await fetch('http://localhost:8000/api/info',config)
             let json = await res.json()
             console.log(json)
-            this.props.navigate('/Lista')
         }
-
+    
         catch(error){
-
+    
         }
         console.log(this.state)
     }
-    
    render(){
-    return(<React.Fragment>
-        <Card
-            {...this.state.formu}
+    return(
+        <Dibujar
+            formu = {this.state.formu}
+            onChange= {this.handleChange}
+            onSubmit = {this.handleSubmit}
         />
-        <Formulario
-            onSubmit= {this.handleSubmit}
-            onChange = {this.handleChange}
-            formu={this.state.formu}
-        />
-    </React.Fragment>)
+    )
    }
 
 }

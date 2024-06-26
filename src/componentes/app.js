@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Maestro from "./pages/maestro";
 import Nofound from "./pages/Nofound";
-import Navergar from "./pages/Navegar";
+import Navergar from "./pages/Navegar"; 
 
 const App = ()=>(
     <BrowserRouter>

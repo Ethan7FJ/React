@@ -1,11 +1,27 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 /* import Card from "../Card"; */
-import Hola from "../saludo"
-import Iterador from "../iterante"
-import Boton from "../boton";
+import DibujarM from "../dibujarM";
 
+const Maestro =()=>{
+    const [data,setData] = useState([])
+    useEffect(()=>{
+        const cargarComponentes = async()=>{
+            let res = await fetch('http://localhost:8000/api/info')
+            let data = await res.json()
+            setData(data)
+        }
+        cargarComponentes()
+    },[])
+    return(
+        <DibujarM
+            data = {data}
+        />
+    )
+} 
 
-export default class Maestro extends React.Component{
+export default Maestro
+
+/* export default class Maestro extends React.Component{
         state = {
             data:[
 
@@ -25,15 +41,9 @@ export default class Maestro extends React.Component{
 
     render(){
         return(
-            <React.Fragment>
-                 <Hola
-                    username = "Johitan"
-                />
-                <Iterador
-                    chao={this.state.data}
-                />
-                <Boton/>
-            </React.Fragment>
+            <DibujarM
+                data = {this.state.data}
+            />
         )
     }
-}
+} */
