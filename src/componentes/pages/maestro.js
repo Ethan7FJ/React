@@ -1,23 +1,19 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 /* import Card from "../Card"; */
 import DibujarM from "../dibujarM";
+import useFetch from "../../Hook/hook";
+import url from "../../config";
 
 const Maestro =()=>{
-    const [data,setData] = useState([])
-    useEffect(()=>{
-        const cargarComponentes = async()=>{
-            let res = await fetch('http://localhost:8000/api/info')
-            let data = await res.json()
-            setData(data)
-        }
-        cargarComponentes()
-    },[])
+    
+    const {data} = useFetch(`${url}/info`)
+
     return(
         <DibujarM
             data = {data}
         />
     )
-} 
+}
 
 export default Maestro
 
