@@ -2,10 +2,27 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+.boton{
+    background-color: hotpink;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.todo{
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 60%;
+}
+
 .contenido{
-    width: 300px;
+    width: 400px;
     height: auto;
     box-shadow: 1px 1px 7px rgb(0, 0, 0);
+    display: flex;
+    margin: 15px;
 }
 
 .back{
@@ -18,12 +35,15 @@ body{
     font-size: 20px;
     text-align: center;
     color: rgb(0, 0, 0);
+    background-color: bisque;
+    border-radius: 0px 15px 15px 0px;
 }
 
 .logo{
     height: 200px;
     width: 200px;
     margin:50px;
+    margin-right: 60px;
     margin-left: 16%;
     border-radius: 50%;
     box-shadow: 2px 2px 7px rgb(255, 255, 255);
@@ -31,4 +51,17 @@ body{
 
 .jas{
     color: rgb(0, 0, 0);
+    background-color: bisque;
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 95%;
+    transition: 0.5s;
+}
+
+.jas:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }

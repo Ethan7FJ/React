@@ -2,10 +2,11 @@ import React from "react";
 import Card from "./Card";
 
 const Iterador = ({chao})=>{
+    console.log(chao)
     return(
         <React.Fragment>
             {chao ? (
-                chao.length > 0 ?(
+                chao.length > 0 ? (
                     chao.map((chao) => (
                         <Card
                             key={chao.id_b}

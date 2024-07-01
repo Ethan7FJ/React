@@ -6,11 +6,12 @@ import url from "../../config";
 
 const Maestro =()=>{
     
-    const {data} = useFetch(`${url}/info`)
+    const {data,loading} = useFetch(`${url}/info`)
 
     return(
         <DibujarM
             data = {data}
+            loading={loading}
         />
     )
 }

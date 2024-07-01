@@ -1,21 +1,21 @@
 import React from "react";
 import "./CSS/stilo.css";
 
-const Card = ({title,descripcion,img})=>(
-    <div className="todo">
-            
+const Card = ({ title, descripcion, img }) => {
+    return (
+        <div className="todo">
             <div className="contenido">
                 <div className="font">
                     <h1>Hola {title}</h1>
                     <p>{descripcion}</p>
                 </div>
                 <div>
-                    <img src={img} className="logo" alt=""/>
+                    <img src={img} className="logo" alt="Imagen" />
                 </div>
             </div>
-
         </div>
-)
+    );
+};
 
 /* class Card extends React.Component{
     render(){

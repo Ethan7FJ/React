@@ -3,7 +3,8 @@ import Hola from "../componentes/saludo"
 import Iterador from "../componentes/iterante"
 import Boton from "../componentes/boton";
 
-const DibujarM = ({data})=>(
+const DibujarM = ({data,loading})=>{
+   return(
     <React.Fragment>
     <Hola
        username = "Johitan"
@@ -15,5 +16,6 @@ const DibujarM = ({data})=>(
 </React.Fragment>
     
 )
+}
 
 export default DibujarM
